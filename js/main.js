@@ -4,16 +4,15 @@ var canvas = document.getElementById("canvas"),
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-var stars = [], // Array that contains the stars
-  FPS = 60, // Frames per second
-  x = 100, // Number of stars
+var stars = [], // Matriz que contém as estrelas
+  FPS = 60, // Quadros por segundo
+  x = 100, // Número de estrelas
   mouse = {
     x: 0,
     y: 0,
-  }; // mouse location
+  }; // localização do mouse
 
-// Push stars to array
-
+// Empurre as estrelas para a matriz
 for (var i = 0; i < x; i++) {
   stars.push({
     x: Math.random() * canvas.width,
@@ -24,8 +23,7 @@ for (var i = 0; i < x; i++) {
   });
 }
 
-// Draw the scene
-
+// Desenhe a estrelas
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -73,8 +71,7 @@ function distance(point1, point2) {
   return Math.sqrt(xs + ys);
 }
 
-// Update star locations
-
+// Atualizar localização de estrelas
 function update() {
   for (var i = 0, x = stars.length; i < x; i++) {
     var s = stars[i];
@@ -92,12 +89,10 @@ canvas.addEventListener("mousemove", function (e) {
   mouse.y = e.clientY;
 });
 
-// Update and draw
-
+// Atualizar e desenhar
 function tick() {
   draw();
   update();
   requestAnimationFrame(tick);
 }
-
 tick();
