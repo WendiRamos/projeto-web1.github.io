@@ -15,3 +15,11 @@ canvas {
 .icone-navbar {
   width: 32px;
 }
+
+.habilidades {
+  max-height: 150px;
+max-width: 200px;
+width: 120px;
+height: 120px;
+  
+}
