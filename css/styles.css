@@ -20,6 +20,7 @@ h3 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 40px;
   font-weight: bold;
+  text-align: center;
 }
 
 p {
@@ -123,18 +124,28 @@ li {
 }
 
 .img {
-  border-radius: 5px;
+  border-radius: 50%;
   width: 170px; 
   height: 170px;
 }
 
+.dados-pessoais {
+  display: flex;
+  align-items: center;
+}
+
 .cards {
-  width: 50rem;
+  max-width: 50rem;
+  background-color: #eee;
 }
 
 .card-border {
   border-radius: 5px;
-  border-color: black;
-  border-style: solid;
+  border-color: gray;
+  border-style: dashed;
   margin: 10px;
+}
+
+.centralizar {
+  text-align: center;
 }
