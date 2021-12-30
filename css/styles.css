@@ -16,10 +16,108 @@ canvas {
   width: 32px;
 }
 
-.habilidades {
-  max-height: 150px;
-max-width: 200px;
-width: 120px;
-height: 120px;
-  
+h3 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+}
+
+h4 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+li {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+}
+
+.csharp {
+  width: 135px;
+  height: 135px;
+}
+
+.html {
+  width: 110px;
+  height: 110px;
+}
+.js {
+  width: 103px;
+  height: 100px;
+}
+
+.css {
+  width: 105px;
+  height: 103px;
+}
+
+.bootstrap {
+  width: 117px;
+  height: 117px;
+}
+
+.ef {
+  width: 117px;
+  height: 117px;
+}
+
+.git {
+  width: 110x;
+  height: 110px;
+  padding-left: 10px;
+  padding-right: 17px;
+}
+
+.github {
+  width: 95x;
+  height: 95px;
+  padding-left: 5px;
+  padding-right: 13px;
+}
+
+.vs {
+  width: 100px;
+  height: 103px;
+  padding-left: 0px;
+}
+
+.vscode {
+  width: 95px;
+  height: 90px;
+  padding-left: 6px;
+  padding-right: 5px;
+}
+
+.mysql {
+  width: 120px;
+  height: 103px;
+  padding-left: 20px;
+  padding-right: 5px;
+}
+
+.sqlserver {
+  width: 135px;
+  height: 100px;
+  padding-left: 16px;
+  padding-right: 10px;
+}
+
+.mvc {
+  width: 125px;
+  height: 115px;
+  padding-left: 10px;
+  padding-right: 5px;
+}
+
+.scrum {
+  width: 130px;
+  height: 115px;
+  padding-left: 16px;
+  padding-right: 10px;
 }
