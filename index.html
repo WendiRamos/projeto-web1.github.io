@@ -25,7 +25,7 @@
     <canvas id="canvas"></canvas>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Wendi Ramos</a>
+        <a class="navbar-brand navbar" href="#">Wendi Ramos</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -38,7 +38,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
+          <div class="navbar-nav navbar">
             <a class="nav-link" href="#sobre">Sobre</a>
             <a class="nav-link" href="#resumo">Resumo</a>
             <a class="nav-link" href="#habilidades">Habilidades</a>
@@ -169,14 +169,28 @@
   </section>
 
   <!--Contato-->
-  <section id="Contato">
+  <section id="contato">
     <div class="card mx-auto my-5 cards">
       <div class="card-body card-border centralizar">
-        <h3 class="card-title">CONTATO</h5>
-
+        <h3 class="card-title">CONTATO</h3>
+          <form action="https://formsubmit.co/wendiramos12@gmail.com" method="POST">
+            <div class="form-group">
+                <label for="name">Nome</label>
+                <input type="text" name="name" id="name" required placeholder="email@exemplo.com" />
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" required />
+            </div>
+            <div class="form-group">
+                <label for="message">Mensagem</label>
+                <textarea name="message" id="message" required></textarea>
+            </div>
+            <input type="hidden" name="_captcha" value="false" />
+            <button type="submit">Enviar</button>
+          </form>
       </div>
     </div>
   </section>
-
-  </body>
+</body>
 </html>
