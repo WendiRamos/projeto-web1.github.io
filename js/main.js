@@ -96,3 +96,28 @@ function tick() {
   requestAnimationFrame(tick);
 }
 tick();
+
+function contato(){
+const nome = $("#name").val();
+const email = $("#email").val();
+const mensagem = $("#message").val();
+
+$.ajax({
+    method: 'POST',
+    url: 'https://formsubmit.co/ajax/wendiramos12@gmail.com',
+    dataType: 'json',
+    accepts: 'application/json',
+    data: {
+        name: nome,
+        email: email,
+        message: mensagem
+    },
+    success: () => {
+      $("#name").val('');
+      $("#email").val('');
+      $("#message").val('');
+      Swal.fire('Sua mensagem foi enviada!', 'Obrigada pelo contato.', 'success');
+  },
+  error: () => Swal.fire('Sua mensagem não foi enviada!', 'Ocorreu um erro. Tente novamente mais tarde.', 'error')
+});
+}
