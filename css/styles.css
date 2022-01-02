@@ -160,3 +160,7 @@ li {
   height: 55px;
   margin: 0% 43%;
 }
+
+.bg-navbar {
+  background-color: #eee;
+}
