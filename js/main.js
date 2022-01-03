@@ -6,7 +6,7 @@ canvas.height = window.innerHeight;
 
 var stars = [], // Matriz que contém as estrelas
   FPS = 60, // Quadros por segundo
-  x = 100, // Número de estrelas
+  x = 120, // Número de estrelas
   mouse = {
     x: 0,
     y: 0,
@@ -84,10 +84,6 @@ function update() {
   }
 }
 
-canvas.addEventListener("mousemove", function (e) {
-  mouse.x = e.clientX;
-  mouse.y = e.clientY;
-});
 
 // Atualizar e desenhar
 function tick() {
