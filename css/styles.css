@@ -66,6 +66,15 @@ li {
 .ef {
   width: 117px;
   height: 117px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.aspnet {
+  width: 165px;
+  height: 130px;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 .git {
@@ -97,9 +106,16 @@ li {
 
 .mysql {
   width: 120px;
-  height: 103px;
-  padding-left: 20px;
-  padding-right: 5px;
+  height: 105px;
+  padding-left: 18px;
+  padding-right: 3px;
+}
+
+.dotnet {
+  width: 120px;
+  height: 107px;
+  padding-left: 13px;
+  padding-right: 3px;
 }
 
 .sqlserver {
