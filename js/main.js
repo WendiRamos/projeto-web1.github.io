@@ -102,7 +102,7 @@ function enviarContato() {
   }
 
   function isEmailValido(email) {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const re = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     return re.test(email);
   }
 
