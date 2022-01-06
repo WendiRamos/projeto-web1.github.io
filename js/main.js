@@ -102,7 +102,8 @@ function enviarContato() {
   }
 
   function isEmailValido(email) {
-    return email.length >= 5 && email.length <= 150;
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
   }
 
   function isMsgValido(mensagem) {
