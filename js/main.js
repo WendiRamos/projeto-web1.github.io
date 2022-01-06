@@ -21,7 +21,7 @@ for (var i = 0; i < x; i++) {
     vx: Math.floor(Math.random() * 50) - 25,
     vy: Math.floor(Math.random() * 50) - 25,
   });
-};
+}
 
 // Desenhe a estrelas
 function draw() {
@@ -82,7 +82,7 @@ function update() {
     if (s.x < 0 || s.x > canvas.width) s.vx = -s.vx;
     if (s.y < 0 || s.y > canvas.height) s.vy = -s.vy;
   }
-};
+}
 
 // Atualizar e desenhar
 function tick() {
