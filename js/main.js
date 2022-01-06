@@ -21,7 +21,7 @@ for (var i = 0; i < x; i++) {
     vx: Math.floor(Math.random() * 50) - 25,
     vy: Math.floor(Math.random() * 50) - 25,
   });
-}
+};
 
 // Desenhe a estrelas
 function draw() {
@@ -82,8 +82,7 @@ function update() {
     if (s.x < 0 || s.x > canvas.width) s.vx = -s.vx;
     if (s.y < 0 || s.y > canvas.height) s.vy = -s.vy;
   }
-}
-
+};
 
 // Atualizar e desenhar
 function tick() {
@@ -93,27 +92,63 @@ function tick() {
 }
 tick();
 
-function contato(){
-const nome = $("#name").val();
-const email = $("#email").val();
-const mensagem = $("#message").val();
+function enviarContato() {
+  const nome = $("#nome").val().trim();
+  const email = $("#email").val().trim();
+  const mensagem = $("#mensagem").val().trim();
 
-$.ajax({
-    method: 'POST',
-    url: 'https://formsubmit.co/ajax/wendiramos12@gmail.com',
-    dataType: 'json',
-    accepts: 'application/json',
+  function isNomeValido(nome) {
+    return nome.length >= 2 && nome.length <= 150;
+  }
+
+  function isEmailValido(email) {
+    return email.length >= 5 && email.length <= 150;
+  }
+
+  function isMsgValido(mensagem) {
+    return mensagem.length >= 5 && mensagem.length <= 600;
+  }
+
+  if (!isNomeValido(nome)) {
+    Swal.fire("Erro!", "Insira um nome válido.", "error");
+    return false;
+  }
+
+  if (!isEmailValido(email)) {
+    Swal.fire("Erro!", "Insira um e-mail válido.", "error");
+    return false;
+  }
+
+  if (!isMsgValido(mensagem)) {
+    Swal.fire("Erro!", "Insira uma mensagem válida.", "error");
+    return false;
+  }
+
+  $.ajax({
+    method: "POST",
+    url: "https://formsubmit.co/ajax/wendiramos12@gmail.com",
+    dataType: "json",
+    accepts: "application/json",
     data: {
-        name: nome,
-        email: email,
-        message: mensagem
+      nome: nome,
+      email: email,
+      mensagem: mensagem,
     },
     success: () => {
-      $("#name").val('');
-      $("#email").val('');
-      $("#message").val('');
-      Swal.fire('Sua mensagem foi enviada!', 'Obrigada pelo contato.', 'success');
-  },
-  error: () => Swal.fire('Sua mensagem não foi enviada!', 'Ocorreu um erro. Tente novamente mais tarde.', 'error')
-});
+      $("#nome").val("");
+      $("#email").val("");
+      $("#mensagem").val("");
+      Swal.fire(
+        "Sua mensagem foi enviada!",
+        "Obrigada pelo contato.",
+        "success"
+      );
+    },
+    error: () =>
+      Swal.fire(
+        "Sua mensagem não foi enviada!",
+        "Ocorreu um erro. Tente novamente mais tarde.",
+        "error"
+      ),
+  });
 }
